@@ -8,6 +8,7 @@
 
 #import "AJMTAppDelegate.h"
 #import "AJMTPrefsController.h"
+#import "AJMTMenuletController.h"
 
 @implementation AJMTAppDelegate
 
@@ -15,7 +16,10 @@
 {
   NSLog(@"applicationDidFinishLaunching called. Calling Controller.init");
   [self createPrefsController];
-  [self openPrefs];
+    //[self openPrefs];
+  self.menuController = [[AJMTMenuletController alloc] initWithNibName:@"AJMTMenuletController" appDelegate:self];
+  
+  [self.menuController loadSelf];
 }
 
 -(void) windowWillClose:(NSNotification *)notification {
@@ -41,7 +45,13 @@
   if(!self.prefsController){
     [self createPrefsController];
   }
-  
   [self.prefsController openPrefs];
 }
+
+- (void)timeZone:(NSString*)tz atIndex:(int)indx added:(BOOL)added {
+  if(self.menuController) {
+    [self.menuController timeZone:tz atIndex:indx added:added];
+  }
+}
+
 @end

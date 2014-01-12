@@ -7,7 +7,13 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AJMTPrefsController">
             <connections>
+                <outlet property="flashSeps" destination="ige-nK-m7c" id="LvU-H5-JFo"/>
+                <outlet property="militaryClock" destination="dar-FZ-9Ow" id="Wzl-62-dkz"/>
+                <outlet property="showAmPm" destination="ciQ-qP-kFl" id="yeX-66-0fm"/>
+                <outlet property="showDate" destination="ss2-YJ-yaO" id="geJ-cl-nza"/>
+                <outlet property="showDayOfWeek" destination="aYg-vx-gvh" id="3CI-Dd-PId"/>
                 <outlet property="tableView" destination="TOk-Pt-pli" id="m4T-qg-ZjR"/>
+                <outlet property="timeSecs" destination="Dfg-Fq-3Gs" id="Opm-21-qsZ"/>
                 <outlet property="view" destination="Be6-sr-KXs" id="mtX-4b-dcA"/>
                 <outlet property="window" destination="uLC-WO-vET" id="uWW-9x-b1a"/>
             </connections>
@@ -17,7 +23,7 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="uLC-WO-vET">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="163" y="199" width="490" height="387"/>
+            <rect key="contentRect" x="848" y="600" width="490" height="387"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <view key="contentView" id="Be6-sr-KXs">
                 <rect key="frame" x="0.0" y="0.0" width="490" height="387"/>
@@ -42,21 +48,21 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="29" horizontalPageScroll="10" verticalLineScroll="29" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="sBQ-g5-t2V">
+                                        <scrollView autohidesScrollers="YES" horizontalLineScroll="29" horizontalPageScroll="10" verticalLineScroll="29" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="sBQ-g5-t2V">
                                             <rect key="frame" x="29" y="35" width="308" height="263"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <clipView key="contentView" copiesOnScroll="NO" id="1QW-Hj-iEJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="308" height="263"/>
+                                                <rect key="frame" x="1" y="1" width="306" height="261"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="27" rowSizeStyle="automatic" viewBased="YES" id="TOk-Pt-pli">
-                                                        <rect key="frame" x="0.0" y="0.0" width="308" height="263"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="306" height="261"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                         <tableColumns>
-                                                            <tableColumn identifier="timeZoneColumn" width="305" minWidth="40" maxWidth="1000" id="cz7-ff-8ZP">
+                                                            <tableColumn identifier="timeZoneColumn" width="303" minWidth="40" maxWidth="1000" id="cz7-ff-8ZP">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                                     <font key="font" metaFont="smallSystem"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -70,7 +76,7 @@
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                 <prototypeCellViews>
                                                                     <tableCellView id="BYV-fo-4Xr">
-                                                                        <rect key="frame" x="1" y="1" width="305" height="27"/>
+                                                                        <rect key="frame" x="1" y="1" width="303" height="27"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                         <subviews>
                                                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="QoB-Tk-XtL">
@@ -79,7 +85,7 @@
                                                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="RC0-Jv-xGT"/>
                                                                             </imageView>
                                                                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="ONb-Bs-IZa">
-                                                                                <rect key="frame" x="25" y="10" width="280" height="17"/>
+                                                                                <rect key="frame" x="25" y="10" width="278" height="17"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="7OW-mv-jss">
                                                                                     <font key="font" metaFont="system"/>
@@ -130,37 +136,49 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button id="Dfg-Fq-3Gs">
+                                        <button identifier="prefs_displaySeconds" id="Dfg-Fq-3Gs">
                                             <rect key="frame" x="146" y="244" width="283" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Display the time with seconds" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="B1q-To-QRy">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="buttonClick:" target="-2" id="Ss7-lO-Y1k"/>
+                                            </connections>
                                         </button>
-                                        <button id="ige-nK-m7c">
+                                        <button identifier="prefs_flashSeparator" id="ige-nK-m7c">
                                             <rect key="frame" x="146" y="224" width="221" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Flash the time separators" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="WFL-55-Rsb">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="buttonClick:" target="-2" id="vYF-JJ-vC5"/>
+                                            </connections>
                                         </button>
-                                        <button id="dar-FZ-9Ow">
+                                        <button identifier="prefs_24hrClock" id="dar-FZ-9Ow">
                                             <rect key="frame" x="146" y="204" width="168" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Use a 24-hr clock" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="zH0-Np-wT8">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="buttonClick:" target="-2" id="81l-8e-dQz"/>
+                                            </connections>
                                         </button>
-                                        <button id="ciQ-qP-kFl">
+                                        <button identifier="prefs_showAmPm" id="ciQ-qP-kFl">
                                             <rect key="frame" x="146" y="184" width="146" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Show AM/PM" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="5HR-nD-xmq">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="buttonClick:" target="-2" id="pjx-pD-YZb"/>
+                                            </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="t3h-Eu-wul">
                                             <rect key="frame" x="57" y="149" width="164" height="17"/>
@@ -171,21 +189,27 @@
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button id="aYg-vx-gvh">
+                                        <button identifier="prefs_showDayOfWeek" id="aYg-vx-gvh">
                                             <rect key="frame" x="146" y="131" width="241" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Show the day of the week" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Rml-rN-GTp">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="buttonClick:" target="-2" id="Pil-MU-5lO"/>
+                                            </connections>
                                         </button>
-                                        <button id="ss2-YJ-yaO">
+                                        <button identifier="prefs_showDate" id="ss2-YJ-yaO">
                                             <rect key="frame" x="146" y="111" width="146" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Show date" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="IB9-b3-fBJ">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
+                                            <connections>
+                                                <action selector="buttonClick:" target="-2" id="Sxd-yv-v8w"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>

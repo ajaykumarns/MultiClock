@@ -14,15 +14,17 @@
   __strong NSTimer *_dateTimer;
   bool _blinked;
   __strong NSMenu *_menu;
+  int totalTz;
 }
+@property (strong) IBOutlet NSMenu *menu;
+@property (weak) AJMTAppDelegate* appDelegate;
+
+
 - (IBAction)quickApp:(id)sender;
 - (IBAction)openDateTimePrefs:(id)sender;
 - (IBAction)openPrefs:(id)sender;
 - (IBAction)openCalendar:(id)sender;
-
-
+- (void)timeZone:(NSString*)tz atIndex:(int)indx added:(BOOL)added;
 - (id)initWithNibName:(NSString *)nibNameOrNil appDelegate:(AJMTAppDelegate*)appDel;
-@property (strong) IBOutlet NSMenu *menu;
-@property (weak) AJMTAppDelegate* appDelegate;
-
+- (void) loadSelf;
 @end

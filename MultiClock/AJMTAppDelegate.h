@@ -15,4 +15,5 @@
 @property (nonatomic,strong) AJMTMenuletController *menuController;
 
 - (void)openPrefs;
+- (void)timeZone:(NSString*)tz atIndex:(int)indx added:(BOOL)added;
 @end

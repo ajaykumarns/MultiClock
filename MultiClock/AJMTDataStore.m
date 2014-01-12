@@ -33,4 +33,12 @@ static NSUserDefaults *_prefs;
   [_prefs setObject:zones forKey:TZ_KEY];
 }
 
++(BOOL) boolForKey:(NSString*)key {
+  return [_prefs boolForKey:key];
+}
+
++(void) setBool:(BOOL)b forKey:(NSString*)k {
+  [_prefs setBool:b forKey:k];
+  [[NSNotificationCenter defaultCenter] postNotificationName:k object:[AJMTDataStore class]];
+}
 @end
