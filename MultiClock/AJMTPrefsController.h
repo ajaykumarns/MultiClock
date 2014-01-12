@@ -11,7 +11,6 @@
 
 @interface AJMTPrefsController : NSViewController{
   __strong NSImage *_selectedImg;
-  __strong NSImage *_notSelectedImg;
   __strong NSArray *_allTimeZones;
   __strong NSDictionary* _tzMappings;
   __strong NSTableView *_tableView;

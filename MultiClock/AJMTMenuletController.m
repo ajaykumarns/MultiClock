@@ -10,10 +10,9 @@
 #import "AJMTAppDelegate.h"
 #import "AJMTDataStore.h"
 
-#define TIME_ZONE_UPDATE_INTERVAL 15
+#define TIME_ZONE_UPDATE_INTERVAL 5
 #define ZONE_TEMPLATE @"HH:mm MMM d, yyyy"
 static NSString *const _zoneTemplate = @"HH:mm MMM d, yyyy";
-
 @implementation AJMTMenuletController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil appDelegate:(AJMTAppDelegate*)appDel{
@@ -36,25 +35,17 @@ static NSString *const _zoneTemplate = @"HH:mm MMM d, yyyy";
   statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
 	[statusItem setHighlightMode:NO];
 	[statusItem setEnabled:YES];
-    //[statusItem setToolTip:@"IP Address"];
 	[statusItem setTarget:self];
   [statusItem setMenu:self.menu];
-  _dateTimer = [NSTimer scheduledTimerWithTimeInterval:1
-                                                target:self
-                                              selector:@selector(updateTime)
-                                              userInfo:nil
-                                               repeats:YES];
-  [_dateTimer fire];
+  
+  _shouldBlink = [AJMTDataStore boolForKey:PREF_FLASH_SEP];
+  [self updateTimeTemplate];
+  [self changeTimeUpdaterToSeconds:[AJMTDataStore boolForKey:PREF_DISPLAY_SECS] || _shouldBlink];
 
-  //update all time zones when the menu opens, otherwise don't do it.
-  NSTimer *timer = [NSTimer timerWithTimeInterval:TIME_ZONE_UPDATE_INTERVAL
-                                           target:self
-                                         selector:@selector(updateTheMenu)
-                                         userInfo:nil
-                                          repeats:YES];
+    //update all time zones when the menu opens, otherwise don't do it.
+  NSTimer *timer = [NSTimer timerWithTimeInterval:TIME_ZONE_UPDATE_INTERVAL target:self selector:@selector(updateTheMenu) userInfo:nil repeats:YES];
   
   [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSEventTrackingRunLoopMode];
-  
   int beginIndex = 0;
   NSArray *tzs = [AJMTDataStore monitoredTimeZones];
   totalTz = (int)[tzs count];
@@ -64,17 +55,83 @@ static NSString *const _zoneTemplate = @"HH:mm MMM d, yyyy";
     [item setTitle:zone];
     [self.menu insertItem:item atIndex:++beginIndex];
   }
-  
-    //NSLog(@"Configured time zones = %@", [AJDataStore timeZones]);
   [self updateTheMenu]; //call it once during startup
-  
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(preferenceChanged:) name:nil object:[AJMTDataStore class]];
 }
 
   /////////////////////////////////////// Action calls /////////////////////////////
 
 - (void) preferenceChanged:(NSNotification*)notification {
+  NSString *name = [notification name];
+  BOOL enabled = [AJMTDataStore boolForKey:name];
   NSLog(@"Preference \"%@\" changed!", [notification name]);
+  
+  [self updateTimeTemplate];
+  
+    //special use case for updating timer.
+  if([PREF_DISPLAY_SECS isEqualToString:name]){
+    [self changeTimeUpdaterToSeconds:enabled || _shouldBlink];
+  } else if([PREF_FLASH_SEP isEqualToString:name]) {
+    [self changeTimeUpdaterToSeconds:enabled || [AJMTDataStore boolForKey:PREF_DISPLAY_SECS]];
+  }
+  
+    //finally update the time being displayed.
+  [self updateTime];
+}
+
+- (void) changeTimeUpdaterToSeconds:(BOOL)perSecond {
+  int interval = perSecond ? 1 : 60;
+  if(_dateTimer){
+    [_dateTimer invalidate];
+    _dateTimer = nil;
+  }
+  
+  NSLog(@"Updating the timer to use : %is", interval);
+  _dateTimer = [NSTimer scheduledTimerWithTimeInterval:interval target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+  [_dateTimer fire];
+}
+
+- (void) updateTimeTemplate {
+  BOOL showDay    = [AJMTDataStore boolForKey:PREF_SHOW_DAY_WEEK];
+  BOOL showMonth  = [AJMTDataStore boolForKey:PREF_SHOW_DATE];
+  _shouldBlink    = [AJMTDataStore boolForKey:PREF_FLASH_SEP];
+  BOOL showSecs   = [AJMTDataStore boolForKey:PREF_DISPLAY_SECS];
+  BOOL showAmpm   = [AJMTDataStore boolForKey:PREF_SHOW_AM_PM];
+  BOOL militaryC  = [AJMTDataStore boolForKey:PREF_24HR_CLK];
+  
+  NSMutableArray *templates = [NSMutableArray new];
+  
+  if(showDay) {
+    [templates addObject:@"E"];
+  }
+  
+  if(showMonth){
+    [templates addObject:@"MMM dd"];
+  }
+  
+  NSString *timeF;
+  if(militaryC){
+    timeF = showSecs ? @"HH:mm:ss" : @"HH:mm";
+  } else {
+    if(showAmpm){
+      timeF = showSecs ? @"h:mm:ss a" : @"h:mm a";
+    } else {
+      timeF = showSecs ? @"h:mm:ss" : @"h:mm";
+    }
+  }
+  
+  [templates addObject:timeF];
+  
+  _timeTemplate = [templates componentsJoinedByString:@" "];
+  if(_shouldBlink){
+    [templates removeLastObject];
+    [templates addObject:[timeF stringByReplacingOccurrencesOfString:@":" withString:@" "]];
+    _timeTemplate2 = [templates componentsJoinedByString:@" "];
+  } else {
+    _timeTemplate2 = nil;
+  }
+  
+  NSLog(@"Updating time templates, for non-blinking = %@, blinking = %@", _timeTemplate, _timeTemplate2);
 }
 
 - (void) timeZone:(NSString *)tz atIndex:(int)indx added:(BOOL)added {
@@ -93,12 +150,14 @@ static NSString *const _zoneTemplate = @"HH:mm MMM d, yyyy";
 }
 
 -(void) updateTime{
-  NSString *template = _blinked ? @"HH:mm" : @"HH mm";
-  _blinked = !_blinked;
+  NSString *template = (_shouldBlink && !_blinked) ? _timeTemplate2 : _timeTemplate;
   [statusItem setTitle:[self formatWith:template usingTz:nil]];
+  _blinked = !_blinked;
 }
 
 -(void) updateTheMenu {
+  [self updateTime];
+  [self changeTimeUpdaterToSeconds:[AJMTDataStore boolForKey:PREF_DISPLAY_SECS] || [AJMTDataStore boolForKey:PREF_FLASH_SEP]];
   NSMutableArray *arr = [NSMutableArray arrayWithArray:[AJMTDataStore monitoredTimeZones]];
   [arr insertObject:[[NSTimeZone defaultTimeZone] name] atIndex:0];
   

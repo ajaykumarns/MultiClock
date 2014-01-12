@@ -20,14 +20,8 @@
   if (self){
     self.appDelegate = delegate;
     _selectedImg = [NSImage imageNamed:@"selected.png"];
-    _notSelectedImg = nil;//[NSImage imageNamed:@""];
     _tzMappings = [NSTimeZone abbreviationDictionary];
     _allTimeZones = [_tzMappings allKeys];
-    /*
-    NSDictionary *dict = [NSTimeZone abbreviationDictionary];
-    for(NSString *key in [dict allKeys]){
-      NSLog(@"%@ -> %@", key, [dict objectForKey:key]);
-    }*/
   }
   return self;
 }
@@ -52,6 +46,15 @@
   self.showDate.state       = [self prefForKey:PREF_SHOW_DATE];
   
   [self.window setIsVisible:YES];
+  
+  if(self.militaryClock.state == NSOnState){
+    [self.showAmPm setEnabled:NO];
+    [self setPrefToNo:PREF_SHOW_AM_PM];
+  } else if(self.showAmPm.state == NSOnState){
+    [self.militaryClock setEnabled:NO];
+    [self setPrefToNo:PREF_24HR_CLK];
+  }
+  
   NSLog(@"Opening preferences with window: %@", self.window);
 }
 
@@ -65,7 +68,7 @@
     BOOL selected = [selectedTz containsObject:tzKey];
     
     cellView.textField.stringValue = [NSString stringWithFormat:@"%@ (%@)", tzAbbrev, tzKey];
-    cellView.imageView.image = selected ? _selectedImg : _notSelectedImg;
+    cellView.imageView.image = selected ? _selectedImg : nil;
     return cellView;
   }
   
@@ -91,11 +94,31 @@
   NSString *sid = [sender identifier];
   BOOL isOn = ([sender state] == NSOnState);
   [AJMTDataStore setBool:isOn forKey:sid];
+  
+  if ([PREF_SHOW_AM_PM isEqualToString:sid]) {
+    if(isOn){
+      [self.militaryClock setState:NSOffState];
+      [self setPrefToNo:PREF_24HR_CLK];
+    }
+    [self.militaryClock setEnabled:!isOn];
+  } else if([PREF_24HR_CLK isEqualToString:sid]){
+    if(isOn){
+      [self.showAmPm setState:NSOffState];
+      [self setPrefToNo:PREF_SHOW_AM_PM];
+    }
+    [self.showAmPm setEnabled:!isOn];
+  }
 }
 
   //////////////////////// Utility functions ///////////////////////////
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
   return [_allTimeZones count];
+}
+
+-(void) setPrefToNo:(NSString*)str {
+  if([AJMTDataStore boolForKey:str]){
+    [AJMTDataStore setBool:NO forKey:str];
+  }
 }
 
 @end

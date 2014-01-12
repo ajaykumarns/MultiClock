@@ -40,7 +40,6 @@
 		768EE83A188213E400E1F8DF /* MultiClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		768EE83D188213E400E1F8DF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		768EE840188213E400E1F8DF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		768EE841188213E400E1F8DF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		768EE842188213E400E1F8DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		768EE845188213E400E1F8DF /* MultiClock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultiClock-Info.plist"; sourceTree = "<group>"; };
 		768EE847188213E400E1F8DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -121,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				768EE840188213E400E1F8DF /* AppKit.framework */,
-				768EE841188213E400E1F8DF /* CoreData.framework */,
 				768EE842188213E400E1F8DF /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
@@ -511,6 +509,7 @@
 				768EE86D188213E400E1F8DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		768EE86E188213E400E1F8DF /* Build configuration list for PBXNativeTarget "MultiClockTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +518,7 @@
 				768EE870188213E400E1F8DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

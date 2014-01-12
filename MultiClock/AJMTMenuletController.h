@@ -12,9 +12,12 @@
 @interface AJMTMenuletController : NSViewController{
   __strong NSStatusItem *statusItem;
   __strong NSTimer *_dateTimer;
-  bool _blinked;
+  BOOL _blinked;
   __strong NSMenu *_menu;
   int totalTz;
+  BOOL _shouldBlink;
+  NSString *_timeTemplate;
+  NSString *_timeTemplate2;
 }
 @property (strong) IBOutlet NSMenu *menu;
 @property (weak) AJMTAppDelegate* appDelegate;

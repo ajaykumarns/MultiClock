@@ -42,20 +42,20 @@
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="hG9-uq-xsR">
                                             <rect key="frame" x="15" y="306" width="445" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Add or remove the time zones for which you need the clock to be displayed" id="Mpf-jg-zl8">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Add or remove by double clicking the time zones" id="Mpf-jg-zl8">
                                                 <font key="font" size="11" name="LucidaGrande"/>
                                                 <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <scrollView autohidesScrollers="YES" horizontalLineScroll="29" horizontalPageScroll="10" verticalLineScroll="29" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="sBQ-g5-t2V">
+                                        <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="sBQ-g5-t2V">
                                             <rect key="frame" x="29" y="35" width="308" height="263"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <clipView key="contentView" copiesOnScroll="NO" id="1QW-Hj-iEJ">
                                                 <rect key="frame" x="1" y="1" width="306" height="261"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="27" rowSizeStyle="automatic" viewBased="YES" id="TOk-Pt-pli">
+                                                    <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" id="TOk-Pt-pli">
                                                         <rect key="frame" x="0.0" y="0.0" width="306" height="261"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
@@ -137,7 +137,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <button identifier="prefs_displaySeconds" id="Dfg-Fq-3Gs">
-                                            <rect key="frame" x="146" y="244" width="283" height="18"/>
+                                            <rect key="frame" x="153" y="252" width="283" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Display the time with seconds" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="B1q-To-QRy">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -148,7 +148,7 @@
                                             </connections>
                                         </button>
                                         <button identifier="prefs_flashSeparator" id="ige-nK-m7c">
-                                            <rect key="frame" x="146" y="224" width="221" height="18"/>
+                                            <rect key="frame" x="153" y="232" width="221" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Flash the time separators" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="WFL-55-Rsb">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -159,7 +159,7 @@
                                             </connections>
                                         </button>
                                         <button identifier="prefs_24hrClock" id="dar-FZ-9Ow">
-                                            <rect key="frame" x="146" y="204" width="168" height="18"/>
+                                            <rect key="frame" x="153" y="212" width="168" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Use a 24-hr clock" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="zH0-Np-wT8">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -170,7 +170,7 @@
                                             </connections>
                                         </button>
                                         <button identifier="prefs_showAmPm" id="ciQ-qP-kFl">
-                                            <rect key="frame" x="146" y="184" width="146" height="18"/>
+                                            <rect key="frame" x="153" y="192" width="146" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Show AM/PM" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="5HR-nD-xmq">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -181,7 +181,7 @@
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="t3h-Eu-wul">
-                                            <rect key="frame" x="57" y="149" width="164" height="17"/>
+                                            <rect key="frame" x="57" y="163" width="164" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Date Options:" id="I0n-I6-u3j">
                                                 <font key="font" metaFont="system"/>
@@ -190,7 +190,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <button identifier="prefs_showDayOfWeek" id="aYg-vx-gvh">
-                                            <rect key="frame" x="146" y="131" width="241" height="18"/>
+                                            <rect key="frame" x="153" y="146" width="241" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Show the day of the week" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Rml-rN-GTp">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -201,7 +201,7 @@
                                             </connections>
                                         </button>
                                         <button identifier="prefs_showDate" id="ss2-YJ-yaO">
-                                            <rect key="frame" x="146" y="111" width="146" height="18"/>
+                                            <rect key="frame" x="153" y="126" width="146" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" title="Show date" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="IB9-b3-fBJ">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
