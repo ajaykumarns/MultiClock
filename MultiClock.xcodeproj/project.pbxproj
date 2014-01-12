@@ -18,6 +18,12 @@
 		768EE85E188213E400E1F8DF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768EE83D188213E400E1F8DF /* Cocoa.framework */; };
 		768EE866188213E400E1F8DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 768EE864188213E400E1F8DF /* InfoPlist.strings */; };
 		768EE868188213E400E1F8DF /* MultiClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 768EE867188213E400E1F8DF /* MultiClockTests.m */; };
+		768EE8741882147300E1F8DF /* AJMTPrefsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 768EE8721882147300E1F8DF /* AJMTPrefsController.m */; };
+		768EE8751882147300E1F8DF /* AJMTPrefsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 768EE8731882147300E1F8DF /* AJMTPrefsController.xib */; };
+		768EE8791882247000E1F8DF /* AJMTMenuletController.m in Sources */ = {isa = PBXBuildFile; fileRef = 768EE8771882247000E1F8DF /* AJMTMenuletController.m */; };
+		768EE87A1882247000E1F8DF /* AJMTMenuletController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 768EE8781882247000E1F8DF /* AJMTMenuletController.xib */; };
+		768EE88018822EEF00E1F8DF /* AJMTDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 768EE87F18822EEF00E1F8DF /* AJMTDataStore.m */; };
+		768EE8821882428000E1F8DF /* selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 768EE8811882428000E1F8DF /* selected.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +56,15 @@
 		768EE863188213E400E1F8DF /* MultiClockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultiClockTests-Info.plist"; sourceTree = "<group>"; };
 		768EE865188213E400E1F8DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		768EE867188213E400E1F8DF /* MultiClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiClockTests.m; sourceTree = "<group>"; };
+		768EE8711882147300E1F8DF /* AJMTPrefsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJMTPrefsController.h; sourceTree = "<group>"; };
+		768EE8721882147300E1F8DF /* AJMTPrefsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJMTPrefsController.m; sourceTree = "<group>"; };
+		768EE8731882147300E1F8DF /* AJMTPrefsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AJMTPrefsController.xib; sourceTree = "<group>"; };
+		768EE8761882247000E1F8DF /* AJMTMenuletController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJMTMenuletController.h; sourceTree = "<group>"; };
+		768EE8771882247000E1F8DF /* AJMTMenuletController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJMTMenuletController.m; sourceTree = "<group>"; };
+		768EE8781882247000E1F8DF /* AJMTMenuletController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AJMTMenuletController.xib; sourceTree = "<group>"; };
+		768EE87E18822EEF00E1F8DF /* AJMTDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJMTDataStore.h; sourceTree = "<group>"; };
+		768EE87F18822EEF00E1F8DF /* AJMTDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJMTDataStore.m; sourceTree = "<group>"; };
+		768EE8811882428000E1F8DF /* selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +130,13 @@
 		768EE843188213E400E1F8DF /* MultiClock */ = {
 			isa = PBXGroup;
 			children = (
+				768EE87C188224B300E1F8DF /* prefs */,
+				768EE87B188224A600E1F8DF /* menu */,
 				768EE84F188213E400E1F8DF /* AJMTAppDelegate.h */,
 				768EE850188213E400E1F8DF /* AJMTAppDelegate.m */,
 				768EE852188213E400E1F8DF /* MainMenu.xib */,
+				768EE87E18822EEF00E1F8DF /* AJMTDataStore.h */,
+				768EE87F18822EEF00E1F8DF /* AJMTDataStore.m */,
 				768EE855188213E400E1F8DF /* Images.xcassets */,
 				768EE844188213E400E1F8DF /* Supporting Files */,
 			);
@@ -127,6 +146,7 @@
 		768EE844188213E400E1F8DF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				768EE8811882428000E1F8DF /* selected.png */,
 				768EE845188213E400E1F8DF /* MultiClock-Info.plist */,
 				768EE846188213E400E1F8DF /* InfoPlist.strings */,
 				768EE849188213E400E1F8DF /* main.m */,
@@ -152,6 +172,26 @@
 				768EE864188213E400E1F8DF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		768EE87B188224A600E1F8DF /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				768EE8761882247000E1F8DF /* AJMTMenuletController.h */,
+				768EE8771882247000E1F8DF /* AJMTMenuletController.m */,
+				768EE8781882247000E1F8DF /* AJMTMenuletController.xib */,
+			);
+			name = menu;
+			sourceTree = "<group>";
+		};
+		768EE87C188224B300E1F8DF /* prefs */ = {
+			isa = PBXGroup;
+			children = (
+				768EE8711882147300E1F8DF /* AJMTPrefsController.h */,
+				768EE8721882147300E1F8DF /* AJMTPrefsController.m */,
+				768EE8731882147300E1F8DF /* AJMTPrefsController.xib */,
+			);
+			name = prefs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +271,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				768EE87A1882247000E1F8DF /* AJMTMenuletController.xib in Resources */,
+				768EE8751882147300E1F8DF /* AJMTPrefsController.xib in Resources */,
 				768EE848188213E400E1F8DF /* InfoPlist.strings in Resources */,
 				768EE856188213E400E1F8DF /* Images.xcassets in Resources */,
+				768EE8821882428000E1F8DF /* selected.png in Resources */,
 				768EE84E188213E400E1F8DF /* Credits.rtf in Resources */,
 				768EE854188213E400E1F8DF /* MainMenu.xib in Resources */,
 			);
@@ -253,8 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				768EE8791882247000E1F8DF /* AJMTMenuletController.m in Sources */,
+				768EE88018822EEF00E1F8DF /* AJMTDataStore.m in Sources */,
 				768EE851188213E400E1F8DF /* AJMTAppDelegate.m in Sources */,
 				768EE84A188213E400E1F8DF /* main.m in Sources */,
+				768EE8741882147300E1F8DF /* AJMTPrefsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

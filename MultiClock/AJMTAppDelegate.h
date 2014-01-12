@@ -7,9 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+@class AJMTPrefsController;
+@class AJMTMenuletController;
 @interface AJMTAppDelegate : NSObject <NSApplicationDelegate>
+- (IBAction)createClicked:(id)sender;
+@property (nonatomic,strong) AJMTPrefsController *prefsController;
+@property (nonatomic,strong) AJMTMenuletController *menuController;
 
-@property (assign) IBOutlet NSWindow *window;
-
+- (void)openPrefs;
 @end

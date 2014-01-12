@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment version="1070" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AJMTMenuletController">
+            <connections>
+                <outlet property="menu" destination="byB-Zx-ZUV" id="GoH-ws-2Z1"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <menu id="byB-Zx-ZUV">
+            <items>
+                <menuItem title="Item" id="OzI-tP-OMK">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="OIt-fc-ul1"/>
+                <menuItem title="Open Calendar..." id="yKD-k2-eUC">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openCalendar:" target="-2" id="4td-Mp-nCP"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Open Preferences..." id="5SG-qa-Sy7">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openPrefs:" target="-2" id="bOb-WH-7I2"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Open Date &amp; Time Preferences..." id="4m3-Lq-qDC">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openDateTimePrefs:" target="-2" id="JTZ-Ad-Obg"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="NjD-Xw-yUk"/>
+                <menuItem title="Quick MultiClock..." id="pqc-g3-Uzm">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quickApp:" target="-2" id="Cdi-SY-tGX"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <connections>
+                <binding destination="-2" name="font" keyPath="self._menu" id="DhA-m4-mAx"/>
+            </connections>
+        </menu>
+        <box autoresizesSubviews="NO" verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="wp9-oD-GVW">
+            <rect key="frame" x="0.0" y="0.0" width="96" height="5"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <font key="titleFont" metaFont="system"/>
+        </box>
+    </objects>
+</document>
