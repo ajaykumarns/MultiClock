@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		768EE83E188213E400E1F8DF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768EE83D188213E400E1F8DF /* Cocoa.framework */; };
+		768EE848188213E400E1F8DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 768EE846188213E400E1F8DF /* InfoPlist.strings */; };
+		768EE84A188213E400E1F8DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 768EE849188213E400E1F8DF /* main.m */; };
+		768EE84E188213E400E1F8DF /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 768EE84C188213E400E1F8DF /* Credits.rtf */; };
+		768EE851188213E400E1F8DF /* AJMTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 768EE850188213E400E1F8DF /* AJMTAppDelegate.m */; };
+		768EE854188213E400E1F8DF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 768EE852188213E400E1F8DF /* MainMenu.xib */; };
+		768EE856188213E400E1F8DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 768EE855188213E400E1F8DF /* Images.xcassets */; };
+		768EE85D188213E400E1F8DF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768EE85C188213E400E1F8DF /* XCTest.framework */; };
+		768EE85E188213E400E1F8DF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768EE83D188213E400E1F8DF /* Cocoa.framework */; };
+		768EE866188213E400E1F8DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 768EE864188213E400E1F8DF /* InfoPlist.strings */; };
+		768EE868188213E400E1F8DF /* MultiClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 768EE867188213E400E1F8DF /* MultiClockTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		768EE85F188213E400E1F8DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 768EE832188213E400E1F8DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 768EE839188213E400E1F8DF;
+			remoteInfo = MultiClock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		768EE83A188213E400E1F8DF /* MultiClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		768EE83D188213E400E1F8DF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		768EE840188213E400E1F8DF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		768EE841188213E400E1F8DF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		768EE842188213E400E1F8DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		768EE845188213E400E1F8DF /* MultiClock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultiClock-Info.plist"; sourceTree = "<group>"; };
+		768EE847188213E400E1F8DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		768EE849188213E400E1F8DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		768EE84B188213E400E1F8DF /* MultiClock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultiClock-Prefix.pch"; sourceTree = "<group>"; };
+		768EE84D188213E400E1F8DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		768EE84F188213E400E1F8DF /* AJMTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AJMTAppDelegate.h; sourceTree = "<group>"; };
+		768EE850188213E400E1F8DF /* AJMTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AJMTAppDelegate.m; sourceTree = "<group>"; };
+		768EE853188213E400E1F8DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		768EE855188213E400E1F8DF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		768EE85B188213E400E1F8DF /* MultiClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		768EE85C188213E400E1F8DF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		768EE863188213E400E1F8DF /* MultiClockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultiClockTests-Info.plist"; sourceTree = "<group>"; };
+		768EE865188213E400E1F8DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		768EE867188213E400E1F8DF /* MultiClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiClockTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		768EE837188213E400E1F8DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				768EE83E188213E400E1F8DF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		768EE858188213E400E1F8DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				768EE85E188213E400E1F8DF /* Cocoa.framework in Frameworks */,
+				768EE85D188213E400E1F8DF /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		768EE831188213E400E1F8DF = {
+			isa = PBXGroup;
+			children = (
+				768EE843188213E400E1F8DF /* MultiClock */,
+				768EE861188213E400E1F8DF /* MultiClockTests */,
+				768EE83C188213E400E1F8DF /* Frameworks */,
+				768EE83B188213E400E1F8DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		768EE83B188213E400E1F8DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				768EE83A188213E400E1F8DF /* MultiClock.app */,
+				768EE85B188213E400E1F8DF /* MultiClockTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		768EE83C188213E400E1F8DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				768EE83D188213E400E1F8DF /* Cocoa.framework */,
+				768EE85C188213E400E1F8DF /* XCTest.framework */,
+				768EE83F188213E400E1F8DF /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		768EE83F188213E400E1F8DF /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				768EE840188213E400E1F8DF /* AppKit.framework */,
+				768EE841188213E400E1F8DF /* CoreData.framework */,
+				768EE842188213E400E1F8DF /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		768EE843188213E400E1F8DF /* MultiClock */ = {
+			isa = PBXGroup;
+			children = (
+				768EE84F188213E400E1F8DF /* AJMTAppDelegate.h */,
+				768EE850188213E400E1F8DF /* AJMTAppDelegate.m */,
+				768EE852188213E400E1F8DF /* MainMenu.xib */,
+				768EE855188213E400E1F8DF /* Images.xcassets */,
+				768EE844188213E400E1F8DF /* Supporting Files */,
+			);
+			path = MultiClock;
+			sourceTree = "<group>";
+		};
+		768EE844188213E400E1F8DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				768EE845188213E400E1F8DF /* MultiClock-Info.plist */,
+				768EE846188213E400E1F8DF /* InfoPlist.strings */,
+				768EE849188213E400E1F8DF /* main.m */,
+				768EE84B188213E400E1F8DF /* MultiClock-Prefix.pch */,
+				768EE84C188213E400E1F8DF /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		768EE861188213E400E1F8DF /* MultiClockTests */ = {
+			isa = PBXGroup;
+			children = (
+				768EE867188213E400E1F8DF /* MultiClockTests.m */,
+				768EE862188213E400E1F8DF /* Supporting Files */,
+			);
+			path = MultiClockTests;
+			sourceTree = "<group>";
+		};
+		768EE862188213E400E1F8DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				768EE863188213E400E1F8DF /* MultiClockTests-Info.plist */,
+				768EE864188213E400E1F8DF /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		768EE839188213E400E1F8DF /* MultiClock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 768EE86B188213E400E1F8DF /* Build configuration list for PBXNativeTarget "MultiClock" */;
+			buildPhases = (
+				768EE836188213E400E1F8DF /* Sources */,
+				768EE837188213E400E1F8DF /* Frameworks */,
+				768EE838188213E400E1F8DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiClock;
+			productName = MultiClock;
+			productReference = 768EE83A188213E400E1F8DF /* MultiClock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		768EE85A188213E400E1F8DF /* MultiClockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 768EE86E188213E400E1F8DF /* Build configuration list for PBXNativeTarget "MultiClockTests" */;
+			buildPhases = (
+				768EE857188213E400E1F8DF /* Sources */,
+				768EE858188213E400E1F8DF /* Frameworks */,
+				768EE859188213E400E1F8DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				768EE860188213E400E1F8DF /* PBXTargetDependency */,
+			);
+			name = MultiClockTests;
+			productName = MultiClockTests;
+			productReference = 768EE85B188213E400E1F8DF /* MultiClockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		768EE832188213E400E1F8DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AJMT;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Ajay Kumar Nadathur Sreenivasan";
+				TargetAttributes = {
+					768EE85A188213E400E1F8DF = {
+						TestTargetID = 768EE839188213E400E1F8DF;
+					};
+				};
+			};
+			buildConfigurationList = 768EE835188213E400E1F8DF /* Build configuration list for PBXProject "MultiClock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 768EE831188213E400E1F8DF;
+			productRefGroup = 768EE83B188213E400E1F8DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				768EE839188213E400E1F8DF /* MultiClock */,
+				768EE85A188213E400E1F8DF /* MultiClockTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		768EE838188213E400E1F8DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				768EE848188213E400E1F8DF /* InfoPlist.strings in Resources */,
+				768EE856188213E400E1F8DF /* Images.xcassets in Resources */,
+				768EE84E188213E400E1F8DF /* Credits.rtf in Resources */,
+				768EE854188213E400E1F8DF /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		768EE859188213E400E1F8DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				768EE866188213E400E1F8DF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		768EE836188213E400E1F8DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				768EE851188213E400E1F8DF /* AJMTAppDelegate.m in Sources */,
+				768EE84A188213E400E1F8DF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		768EE857188213E400E1F8DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				768EE868188213E400E1F8DF /* MultiClockTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		768EE860188213E400E1F8DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 768EE839188213E400E1F8DF /* MultiClock */;
+			targetProxy = 768EE85F188213E400E1F8DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		768EE846188213E400E1F8DF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				768EE847188213E400E1F8DF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		768EE84C188213E400E1F8DF /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				768EE84D188213E400E1F8DF /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		768EE852188213E400E1F8DF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				768EE853188213E400E1F8DF /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		768EE864188213E400E1F8DF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				768EE865188213E400E1F8DF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		768EE869188213E400E1F8DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		768EE86A188213E400E1F8DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		768EE86C188213E400E1F8DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultiClock/MultiClock-Prefix.pch";
+				INFOPLIST_FILE = "MultiClock/MultiClock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		768EE86D188213E400E1F8DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultiClock/MultiClock-Prefix.pch";
+				INFOPLIST_FILE = "MultiClock/MultiClock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		768EE86F188213E400E1F8DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MultiClock.app/Contents/MacOS/MultiClock";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultiClock/MultiClock-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MultiClockTests/MultiClockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		768EE870188213E400E1F8DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MultiClock.app/Contents/MacOS/MultiClock";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultiClock/MultiClock-Prefix.pch";
+				INFOPLIST_FILE = "MultiClockTests/MultiClockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		768EE835188213E400E1F8DF /* Build configuration list for PBXProject "MultiClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				768EE869188213E400E1F8DF /* Debug */,
+				768EE86A188213E400E1F8DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		768EE86B188213E400E1F8DF /* Build configuration list for PBXNativeTarget "MultiClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				768EE86C188213E400E1F8DF /* Debug */,
+				768EE86D188213E400E1F8DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		768EE86E188213E400E1F8DF /* Build configuration list for PBXNativeTarget "MultiClockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				768EE86F188213E400E1F8DF /* Debug */,
+				768EE870188213E400E1F8DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 768EE832188213E400E1F8DF /* Project object */;
+}
