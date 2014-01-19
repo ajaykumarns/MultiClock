@@ -12,3 +12,8 @@ If you are looking for a solution to the same problem here it is... Just downloa
 ----------------------------------------------------
 
 **License**: BSD 
+
+
+Download app here or from release:
+-----------------------------------
+http://dl.bintray.com/ajaykumarns/MultiClock/MultiClock.app.zip
