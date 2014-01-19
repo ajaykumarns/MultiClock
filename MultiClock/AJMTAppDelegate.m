@@ -15,10 +15,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
   NSLog(@"applicationDidFinishLaunching called. Calling Controller.init");
-  [self createPrefsController];
-    //[self openPrefs];
   self.menuController = [[AJMTMenuletController alloc] initWithNibName:@"AJMTMenuletController" appDelegate:self];
-  
   [self.menuController loadSelf];
 }
 

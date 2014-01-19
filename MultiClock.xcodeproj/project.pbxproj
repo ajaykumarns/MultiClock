@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76342439188340FF00F5E367 /* MultiClock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MultiClock.entitlements; sourceTree = "<group>"; };
 		768EE83A188213E400E1F8DF /* MultiClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		768EE83D188213E400E1F8DF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		768EE840188213E400E1F8DF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -128,6 +129,7 @@
 		768EE843188213E400E1F8DF /* MultiClock */ = {
 			isa = PBXGroup;
 			children = (
+				76342439188340FF00F5E367 /* MultiClock.entitlements */,
 				768EE87C188224B300E1F8DF /* prefs */,
 				768EE87B188224A600E1F8DF /* menu */,
 				768EE84F188213E400E1F8DF /* AJMTAppDelegate.h */,
@@ -240,6 +242,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Ajay Kumar Nadathur Sreenivasan";
 				TargetAttributes = {
+					768EE839188213E400E1F8DF = {
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
 					768EE85A188213E400E1F8DF = {
 						TestTargetID = 768EE839188213E400E1F8DF;
 					};
@@ -428,6 +437,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MultiClock/MultiClock.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MultiClock/MultiClock-Prefix.pch";
@@ -441,6 +452,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MultiClock/MultiClock.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MultiClock/MultiClock-Prefix.pch";

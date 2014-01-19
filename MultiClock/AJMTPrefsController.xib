@@ -214,6 +214,50 @@
                                     </subviews>
                                 </view>
                             </tabViewItem>
+                            <tabViewItem label="About" identifier="" id="3km-NI-6hh">
+                                <view key="view" id="M6Z-Gx-51L">
+                                    <rect key="frame" x="10" y="33" width="444" height="328"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ftX-Se-N7b">
+                                            <rect key="frame" x="60" y="181" width="325" height="53"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="MultiClock v1.0" id="9Sd-ve-6yP">
+                                                <font key="font" size="31" name="LucidaGrande-Bold"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="WP8-7d-rYm">
+                                            <rect key="frame" x="332" y="148" width="144" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="developed by," id="MQy-C8-uJ4">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ooa-bt-RFF">
+                                            <rect key="frame" x="332" y="123" width="117" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Ajay Nadathur" id="FoF-ca-Iw5">
+                                                <font key="font" size="13" name="LucidaGrande"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="CbZ-it-rbx">
+                                            <rect key="frame" x="269" y="105" width="170" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="ajayns.inbox@gmail.com" id="T5I-Fs-FOM">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                    </subviews>
+                                </view>
+                            </tabViewItem>
                         </tabViewItems>
                     </tabView>
                 </subviews>
