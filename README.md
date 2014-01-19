@@ -11,7 +11,13 @@ If you are looking for a solution to the same problem here it is... Just downloa
 
 ----------------------------------------------------
 
-**License**: BSD 
+**License**: 
+------------
+You can use the source code for learning purpose, but you cannot sell this app or its modifications without my permission.
+
+**Stupid end-user agreement drivel**
+-----------------------------------
+Also the app comes with no guarantees and you acknowledge that you are using this app at your own risk and release me from any liability claims.
 
 
 Download app here or from release:
